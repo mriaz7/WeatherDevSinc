@@ -46,7 +46,13 @@ function fetchWeatherData(location) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${apiKey}`;
 
   fetch(url)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("City not found");
+      }
+      return response.json();
+    })
+
     .then((data) => {
       locationName.textContent = data.name;
       if (data.main) {
@@ -65,5 +71,8 @@ function fetchWeatherData(location) {
         windSpeed.textContent = `${data.wind.speed.toFixed()} MPH`;
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("City not found. Please enter a valid city name.");
+    });
 }
