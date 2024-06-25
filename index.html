@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Weather App | M Riaz</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left-info">
+            <div class="pic-gradient"></div>
+            <div class="today-info">
+                <h2 id="daySpan">....</h2>
+                
+                <span id="dateSpan"></span>
+
+                
+                <div>
+                    <i class='bx bx-current-location'></i>
+                    <span id="locationName">Search your City</span>
+
+                
+                    </div>
+                </div>
+
+                <div class="today-weather">
+                    <img id="weather-icon" src="" alt="">
+                    <h1 class="weather-temp" id="temperature">...
+                        
+                    </h1>
+                    <p id="weatherDescription"></p>
+    
+                </div>
+            </div>
+            
+            <div class="right-info">
+                <div class="day-info">
+                
+                    <div>
+                        <span class="title">HUMIDITY</span>
+                        <span class="value" id="humidity">---</span>
+                      </div>
+                    <div>
+                        <span class="title">WIND SPEED</span>
+                        <span class="value" id="windSpeed">---</span>
+                    </div>
+                        
+                </div>
+    
+                <ul class="days-list">
+                    <li>
+                        
+                            <img id="weather-icon1" src="h.png" alt="o">
+                            <span class="weather-right" id="feelsLike">
+                                -!-
+                            </span>
+                           
+
+                            <span id="weatherDescription1*">FEELS LIKE</span>
+                            
+                        
+                    </li>
+                    
+                    
+                    <li>
+                        
+                        <img id="weather-icon1" src="h.png" alt="o">
+                       <span class="value" id="humidity">---</span>
+                        <span id="weatherDescription1">HUMIDITY</span>
+                     
+                </li>
+                <li>
+                        
+                    <img id="weather-icon1" src="h.png" alt="o">
+                    <span class="value" id="windSpeed">---</span>
+
+                    <span id="weatherDescription1">WIND SPEED</span>
+              
+            </li>
+         
+                </ul>
+    
+
+                <div class="btn-container">
+
+                
+                        <input class="loc-button" id="locationInput" placeholder="Enter Location" type="text">
+                
+                </div>
+    
+            </div>
+           </div>
+        </div>
+
+        
+    <script src="script.js"></script>
+
+</body>
+
+</html>
