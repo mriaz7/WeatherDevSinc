@@ -7,9 +7,7 @@ const humidity = document.getElementById("humidity");
 const windSpeed = document.getElementById("windSpeed");
 const bottom = document.getElementById("bottom");
 const weatherIcon = document.getElementById("weather-icon");
-const weatherIcon1 = document.getElementById("weather-icon1");
 const weatherDescription = document.getElementById("weatherDescription");
-const weatherDescription1 = document.getElementById("weatherDescription1");
 
 // localStorage for saved location
 window.addEventListener("load", () => {
@@ -69,5 +67,3 @@ function fetchWeatherData(location) {
     })
     .catch((error) => console.error("Error:", error));
 }
-
-// https://api.openweathermap.org/data/2.5/forecast?q=lahore&appid=95db7735bec9873c7a037dbfab3ed276
