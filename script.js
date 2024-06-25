@@ -11,18 +11,13 @@ const weatherIcon1 = document.getElementById("weather-icon1");
 const weatherDescription = document.getElementById("weatherDescription");
 const weatherDescription1 = document.getElementById("weatherDescription1");
 
-// Check localStorage for saved location
+// localStorage for saved location
 window.addEventListener("load", () => {
   const savedLocation = localStorage.getItem("location");
   if (savedLocation) {
     fetchWeatherData(savedLocation);
   }
 });
-
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   const currentDate = new Date().toDateString();
-//   document.getElementById("dateSpan").textContent = currentDate;
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const currentDate = new Date();
